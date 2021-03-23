@@ -3,7 +3,7 @@ import xapi from 'xapi';
 function hue(data) {
   var url = 'http://<ip>/api/<user>/groups/1/action';
   var headers = 'Content-Type: application/json';
-  var command = `{"on" : ` + data + `}`;
+  var command = `{"on" : ${data}}`;
   xapi.command('HttpClient Put', { 'Url': url, 'Header': headers }, command);
 }
 
